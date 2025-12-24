@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizhe Zhang | PhD Applicant Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .hero-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero-content h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--accent-color); }
+
+        /* Sections */
+        h2 {
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            color: var(--primary-color);
+        }
+
+        .pub-card {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .pub-card:hover { background: var(--light-bg); }
+
+        .pub-title { font-weight: 700; display: block; margin-bottom: 5px; }
+        .pub-authors { font-size: 0.95rem; color: #555; }
+        .pub-venue { font-style: italic; color: var(--accent-color); font-weight: 500; }
+        .me { text-decoration: underline; font-weight: bold; }
+
+        .btn-group {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 4px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: #555;
+            transition: 0.2s;
+        }
+
+        .btn:hover { background: var(--primary-color); color: white; border-color: var(--primary-color); }
+
+        .highlight-tag {
+            background: #e1f5fe;
+            color: #0288d1;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-img { width: 180px; height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <img src="apple_style_executive_portrait.png" alt="Lizhe Zhang" class="hero-img">
+        <div class="hero-content">
+            <h1>Lizhe Zhang</h1>
+            <p class="hero-subtitle">MS in Computer Science @ UC San Diego [cite: 6]</p>
+            <p>Advised by <a href="#">Prof. Jingbo Shang</a> [cite: 21]</p>
+            <div class="social-links">
+                <a href="mailto:liz058@ucsd.edu" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://lizhezhang.github.io" title="Website"><i class="fas fa-globe"></i></a>
+                <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="Lizhe_Zhang_PhD_application_CV.pdf" class="btn" style="margin-top:20px; display:inline-block; background: var(--primary-color); color: white;">Download CV (PDF)</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a second-year Master's student at **UC San Diego**[cite: 1, 6]. My research focuses on the **reliability and evaluation of Large Language Models (LLMs)**, 
+            particularly in code generation and uncertainty-based systems[cite: 24, 31]. I am deeply interested in 
+            understanding how models generalize beyond their training data[cite: 25, 43].
+        </p>
+        <p>
+            Previously, I graduated with a B.S. in Computer Engineering from **Georgia Tech** (GPA: 3.96) [cite: 8, 18] and a B.S. in Physics from **Emory University** (GPA: 3.90)[cite: 10, 20].
+        </p>
+    </section>
+
+    <section id="publications">
+        <h2>Selected Publications</h2>
+        
+        <div class="pub-card">
+            <span class="highlight-tag">Under Review</span>
+            <span class="pub-title">Memorize or Generalize? Evaluating LLM Code Generation with Code Rewriting [cite: 43]</span>
+            <span class="pub-authors"><span class="me">Lizhe Zhang*</span>, Wentao Chen*, Li Zhong, Letian Peng, Zilong Wang, Jingbo Shang [cite: 43]</span><br>
+            <span class="pub-venue">ICLR 2026 (Under Review) [cite: 45]</span>
+            <div class="btn-group">
+                <a href="#" class="btn">ArXiv</a>
+                <a href="#" class="btn">Code</a>
+                <a href="#" class="btn">Project Page</a>
+            </div>
+        </div>
+
+        <div class="pub-card">
+            <span class="pub-title">IMUGPT 2.0: Language-Based Cross Modality Transfer for Sensor-Based Human Activity Recognition [cite: 44]</span>
+            <span class="pub-authors">Zikang Leng, Amitrajit Bhattacharjee, Hrudhai Rajasekhar, <span class="me">Lizhe Zhang</span>, Elizabeth Bruda, Hyeokhyen Kwon, Thomas Ploetz [cite: 46]</span><br>
+            <span class="pub-venue">IMWUT / UbiComp 2024 [cite: 46]</span>
+            <div class="btn-group">
+                <a href="#" class="btn">Paper</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Patents & Projects</h2>
+        <ul>
+            <li>
+                <strong>US Patent Filed:</strong> Language-based Cross-modality Transfer System for Generating Virtual IMU Data [cite: 66, 73]
+            </li>
+            <li>
+                <strong>Find Your Spot:</strong> Engineered an end-to-end BLE-based navigation system[cite: 71, 77, 78].
+            </li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>UC San Diego</strong> | M.S. in Computer Science (GPA: 4.0/4.0) [cite: 5, 6, 16]</p>
+        <p><strong>Georgia Institute of Technology</strong> | B.S. in Computer Engineering (GPA: 3.96/4.0) [cite: 7, 8, 18]</p>
+        <p><strong>Emory University</strong> | B.S. in Physics, Minor in Math (GPA: 3.90/4.0) [cite: 9, 10, 20]</p>
+    </section>
+
+</body>
+</html>
