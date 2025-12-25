@@ -121,7 +121,73 @@
             .hero { flex-direction: column; text-align: center; }
             .hero-img { width: 180px; height: 180px; }
         }
+        .edu-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .edu-info {
+            flex: 1; /* Takes up left space */
+            padding-right: 20px;
+        }
+
+        .edu-date {
+            white-space: nowrap; /* Keeps date on one line */
+            color: #666;
+            font-variant-numeric: tabular-nums; /* Keeps dates aligned cleanly */
+        }
+
+        @media (max-width: 600px) {
+            .edu-entry {
+                flex-direction: column; /* Stacks on mobile for readability */
+            }
+            .edu-date {
+                font-size: 0.9rem;
+                margin-top: -5px;
+            }
+        }
+        .pub-container {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .pub-figure {
+            flex: 0 0 280px; /* Fixed width for the image */
+        }
+
+        .pub-figure img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .pub-details {
+            flex: 1; /* Takes up remaining space */
+        }
+
+        /* Responsive: Stack image on top of text on small screens */
+        @media (max-width: 768px) {
+            .pub-container {
+                flex-direction: column;
+            }
+            .pub-figure {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
     </style>
+
+
+
+
+
+
+
 </head>
 <body>
 
@@ -129,14 +195,13 @@
         <img src="apple_style_executive_portrait.png" alt="Lizhe Zhang" class="hero-img">
         <div class="hero-content">
             <h1>Lizhe Zhang</h1>
-            <p class="hero-subtitle">MS in Computer Science @ UC San Diego [cite: 6]</p>
-            <p>Advised by <a href="#">Prof. Jingbo Shang</a> [cite: 21]</p>
+            <p class="hero-subtitle">MS in Computer Science @ UC San Diego</p>
             <div class="social-links">
                 <a href="mailto:liz058@ucsd.edu" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://lizhezhang.github.io" title="Website"><i class="fas fa-globe"></i></a>
-                <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://scholar.google.com/citations?user=iB0NiC8AAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/FearandDreams1123" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lizhe-zhang-68312418b/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             </div>
             <a href="Lizhe_Zhang_PhD_application_CV.pdf" class="btn" style="margin-top:20px; display:inline-block; background: var(--primary-color); color: white;">Download CV (PDF)</a>
         </div>
@@ -145,36 +210,71 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            I am a second-year Master's student at **UC San Diego**[cite: 1, 6]. My research focuses on the **reliability and evaluation of Large Language Models (LLMs)**, 
-            particularly in code generation and uncertainty-based systems[cite: 24, 31]. I am deeply interested in 
-            understanding how models generalize beyond their training data[cite: 25, 43].
-        </p>
-        <p>
-            Previously, I graduated with a B.S. in Computer Engineering from **Georgia Tech** (GPA: 3.96) [cite: 8, 18] and a B.S. in Physics from **Emory University** (GPA: 3.90)[cite: 10, 20].
+            I am Lizhe Zhang, a second-year Master's student in <strong>Computer Science</strong> at <strong>UC San Diego</strong>. I am fortunate to be work with <a href="https://shangjingbo1226.github.io">Prof. Jingbo Shang</a>, <a href="https://www.cc.gatech.edu/people/thomas-ploetz">Prof. Thomas Ploetz</a> and <a href="https://cs.rice.edu/~xh37/index.html">Prof. Xia Hu</a>. My primary research focus is on building reliable and self-evolving AI systems, specifically focusing on <strong>LLM generalization</strong>, <strong>uncertainty-aware multi-model collaboration</strong>, and <strong>diversity-driven synthetic data generation</strong>.
         </p>
     </section>
+    <section id="education">
+        <h2>Education</h2>
+        
+        <div class="edu-entry">
+            <div class="edu-info">
+                <strong>UC San Diego</strong> | M.S. in Computer Science (GPA: 4.0/4.0)
+            </div>
+            <div class="edu-date">2024.09 - 2026.03 (Expected)</div>
+        </div>
+    
+        <div class="edu-entry">
+            <div class="edu-info">
+                <strong>Georgia Institute of Technology</strong> | B.S. in Computer Engineering (GPA: 3.96/4.0)
+            </div>
+            <div class="edu-date">2022.05 - 2023.12</div>
+        </div>
+    
+        <div class="edu-entry">
+            <div class="edu-info">
+                <strong>Emory University</strong> | B.S. in Physics, Minor in Math (GPA: 3.90/4.0)
+            </div>
+            <div class="edu-date">2019.08 - 2023.12</div>
+        </div>
+    </section>
+
+
 
     <section id="publications">
         <h2>Selected Publications</h2>
         
         <div class="pub-card">
-            <span class="highlight-tag">Under Review</span>
-            <span class="pub-title">Memorize or Generalize? Evaluating LLM Code Generation with Code Rewriting [cite: 43]</span>
-            <span class="pub-authors"><span class="me">Lizhe Zhang*</span>, Wentao Chen*, Li Zhong, Letian Peng, Zilong Wang, Jingbo Shang [cite: 43]</span><br>
-            <span class="pub-venue">ICLR 2026 (Under Review) [cite: 45]</span>
-            <div class="btn-group">
-                <a href="#" class="btn">ArXiv</a>
-                <a href="#" class="btn">Code</a>
-                <a href="#" class="btn">Project Page</a>
+            <div class="pub-container">
+                <div class="pub-figure">
+                    <img src="memorize_generalize_workflow.png" alt="Code Rewriting Workflow">
+                </div>
+                <div class="pub-details">
+                    <span class="highlight-tag">Under Review</span>
+                    <span class="pub-title">Memorize or Generalize? Evaluating LLM Code Generation with Code Rewriting</span>
+                    <span class="pub-authors"><span class="me">Lizhe Zhang*</span>, Wentao Chen*, Li Zhong, Letian Peng, Zilong Wang, Jingbo Shang</span><br>
+                    <span class="pub-venue">ICLR 2026 (Under Review)</span>
+                    <div class="btn-group">
+                        <a href="https://arxiv.org/abs/2503.02296" class="btn">ArXiv</a>
+                        <!-- <a href="#" class="btn">Code</a> -->
+                        <!-- <a href="#" class="btn">Project Page</a> -->
+                    </div>
+                </div>
             </div>
         </div>
-
+    
         <div class="pub-card">
-            <span class="pub-title">IMUGPT 2.0: Language-Based Cross Modality Transfer for Sensor-Based Human Activity Recognition [cite: 44]</span>
-            <span class="pub-authors">Zikang Leng, Amitrajit Bhattacharjee, Hrudhai Rajasekhar, <span class="me">Lizhe Zhang</span>, Elizabeth Bruda, Hyeokhyen Kwon, Thomas Ploetz [cite: 46]</span><br>
-            <span class="pub-venue">IMWUT / UbiComp 2024 [cite: 46]</span>
-            <div class="btn-group">
-                <a href="#" class="btn">Paper</a>
+            <div class="pub-container">
+                <div class="pub-figure">
+                    <img src="imugpt_workflow.png" alt="IMUGPT 2.0 Methodology">
+                </div>
+                <div class="pub-details">
+                    <span class="pub-title">IMUGPT 2.0: Language-Based Cross Modality Transfer for Sensor-Based Human Activity Recognition</span>
+                    <span class="pub-authors">Zikang Leng, Amitrajit Bhattacharjee, Hrudhai Rajasekhar, <span class="me">Lizhe Zhang</span>, Elizabeth Bruda, Hyeokhyen Kwon, Thomas Ploetz</span><br>
+                    <span class="pub-venue">IMWUT 2024</span>
+                    <div class="btn-group">
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3678545" class="btn">Paper</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -189,13 +289,6 @@
                 <strong>Find Your Spot:</strong> Engineered an end-to-end BLE-based navigation system[cite: 71, 77, 78].
             </li>
         </ul>
-    </section>
-
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>UC San Diego</strong> | M.S. in Computer Science (GPA: 4.0/4.0) [cite: 5, 6, 16]</p>
-        <p><strong>Georgia Institute of Technology</strong> | B.S. in Computer Engineering (GPA: 3.96/4.0) [cite: 7, 8, 18]</p>
-        <p><strong>Emory University</strong> | B.S. in Physics, Minor in Math (GPA: 3.90/4.0) [cite: 9, 10, 20]</p>
     </section>
 
 </body>
