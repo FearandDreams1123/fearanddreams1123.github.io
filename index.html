@@ -152,6 +152,7 @@
                 background-color var(--apple-structure-timing),
                 color var(--apple-structure-timing);
         }
+        
         .edu-entry:hover {
             transform: scale(1.005); /* Very subtle zoom - Apple never overdoes it */
             box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Soft, expansive shadow */
@@ -334,6 +335,18 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Make long text blocks look more "aligned" */
+        .prose {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+        }
+
+        /* Optional: nicer line lengths so it doesn't look too wide on desktop */
+        .prose-narrow {
+        max-width: 980px;
+        }
     </style>
 </head>
 <body>
@@ -356,7 +369,7 @@
             <img src="apple_style_executive_portrait.png" alt="Lizhe Zhang" class="hero-img">
             <div class="hero-content">
                 <h1>Lizhe Zhang</h1>
-                <p class="hero-subtitle">MS in Computer Science at UC San Diego</p>
+                <p class="hero-subtitle">M.S. in Computer Science at UC San Diego</p>
                 <div class="social-links">
                     <a href="mailto:liz058@ucsd.edu"><i class="fas fa-envelope"></i></a>
                     <a href="https://scholar.google.com/citations?user=iB0NiC8AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
@@ -371,9 +384,8 @@
 
         <section>
             <h2>About Me</h2>
-            <p style="font-size: 19px; color: var(--text-secondary); line-height: 1.6;">
-                I am Lizhe Zhang, a second-year Master's student in <strong>Computer Science</strong> at <span style="color: var(--text-main); font-weight: 500;">UC San Diego</span>, advided by <a href="https://shangjingbo1226.github.io">Prof. Jingbo Shang</a>. I am also fortunate to be work with <a href="https://www.cc.gatech.edu/people/thomas-ploetz">Prof. Thomas Ploetz</a> and <a href="https://cs.rice.edu/~xh37/index.html">Prof. Xia Hu</a>. My primary research focus is on building reliable and self-evolving AI systems, specifically focusing on <strong>LLM generalization</strong>, <strong>uncertainty-aware multi-model collaboration</strong>, and <strong>diversity-driven synthetic data generation</strong>.
-
+            <p class="prose prose-narrow" style="font-size: 19px; color: var(--text-secondary); line-height: 1.6;">
+                I am Lizhe Zhang, a second-year master's student in <strong>Computer Science</strong> at <span style="color: var(--text-main); font-weight: 500;">UC San Diego</span>, advised by <a href="https://shangjingbo1226.github.io">Prof. Jingbo Shang</a>. I am also fortunate to work with <a href="https://www.cc.gatech.edu/people/thomas-ploetz">Prof. Thomas Ploetz</a> and <a href="https://cs.rice.edu/~xh37/index.html">Prof. Xia Hu</a>. My primary research focuses on building reliable and self-evolving AI systems, specifically on <strong>LLM generalization</strong>, <strong>uncertainty-aware multi-model collaboration</strong>, and <strong>diversity-driven synthetic data generation</strong>.
             </p>
         </section>
 
@@ -384,14 +396,14 @@
                     <strong>UC San Diego</strong><br>
                     <span style="color: var(--text-secondary)">M.S. in Computer Science (GPA: 4.0/4.0)</span>
                 </div>
-                <div class="edu-date">2024.09 - 2026.03</div>
+                <div class="edu-date">2024.09-2026.03</div>
             </div>
             <div class="edu-entry">
                 <div class="edu-info">
                     <strong>Georgia Institute of Technology</strong><br>
                     <span style="color: var(--text-secondary)">B.S. in Computer Engineering (GPA: 3.96/4.0)</span>
                 </div>
-                <div class="edu-date">2022.05 - 2023.12</div>
+                <div class="edu-date">2022.05-2023.12</div>
             </div>
 
             <div class="edu-entry">
@@ -399,7 +411,7 @@
                     <strong>Emory University</strong><br>
                     <span style="color: var(--text-secondary)">B.S. in Physics, Minor in Applied Mathematics (GPA: 3.90/4.0)</span>
                 </div>
-                <div class="edu-date">2019.08 - 2023.12</div>
+                <div class="edu-date">2019.08-2023.12</div>
             </div>
         </section>
 
@@ -507,7 +519,7 @@
             <div class="project-item">
                 <div class="project-info">
                     <h3 style="font-size: 24px; margin-bottom: 10px;">Virtual Reality Gesture Gloves</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;">Arduino-based multi-sensor glove for 3D gesture mapping and obstacle alerts.</p>
+                    <p class="prose prose-narrow" style="color: var(--text-secondary); margin-bottom: 20px;">Arduino-based multi-sensor glove for 3D gesture mapping and obstacle alerts.</p>
                     <ul style="padding-left: 20px; color: var(--text-main);">
                         <li>Designed and built an Arduino-based, multi-sensor glove that captures finger motions using rotary potentiometers.</li>
                         <li>Implemented firmware to map continuous resistance changes to 3D hand gestures in virtual space.</li>
@@ -527,8 +539,7 @@
             <div class="project-item">
                 <div class="project-info">
                     <h3 style="font-size: 24px; margin-bottom: 10px;">Find Your Spot: A Bluetooth Low Energy-based Parking Navigation System</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 20px;">An intelligent parking deck navigation system based on ultra-low power sensors and cloud computation.
-                        efficiency of the parking space..</p>
+                    <p class="prose prose-narrow" style="color: var(--text-secondary); margin-bottom: 20px;">An intelligent parking deck navigation system using ultra-low-power sensors and cloud computation to improve parking-space utilization.</p>
                     <ul style="padding-left: 20px; color: var(--text-main);">
                         <li>Engineered an end-to-end parking navigation system utilizing Bluetooth Low Energy (BLE) beacons.</li>
                         <li>Leveraged RSSI values and path loss models to enable precise location detection and vehicle routing.</li>
