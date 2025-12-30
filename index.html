@@ -383,10 +383,41 @@
         .prose-narrow {
         max-width: 980px;
         }
+
+
+        /* Widget Container Styling */
+        .stats-card {
+            background: var(--secondary-bg);
+            padding: 24px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the map */
+            justify-content: center;
+            margin-top: 32px;
+            transition: 
+                transform var(--apple-text-timing), 
+                box-shadow var(--apple-structure-timing),
+                background-color var(--apple-structure-timing);
+        }
+
+        .stats-card:hover {
+            transform: scale(1.005);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            background: #fff;
+        }
+
+        .stats-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="container nav-content">
             <div style="font-weight: 600; font-size: 18px;">Lizhe Zhang</div>
@@ -592,10 +623,19 @@
             </div>
         </section>
 
+
+        <section id="stats" style="margin-bottom: 60px;">
+            <div class="stats-card">
+                <span class="stats-title">Visitor Reach</span>
+                <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=e8e8ed&w=300&t=n&d=BYObTb2xads7VD5_baTrXQXT6E8kZBUJ6zOJ3qPuB8E&co=f5f5f7&ct=1d1d1f&cmo=0071e3&cmn=34c759'></script>
+            </div>
+        </section>
+
         <footer style="margin: 80px 0 40px; padding-top: 40px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 13px;">
             <p>© 2025 Lizhe Zhang.</p>
         </footer>
     </div>
+
 
 </body>
 </html>
